@@ -1,1 +1,2 @@
 # 100days-1
+This project is a simple non-saving react form that will showcase a simple card, error handling with UI and models. If successful, you will be able to render a user with an age in a separate card. 
