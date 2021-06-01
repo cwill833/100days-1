@@ -15,6 +15,7 @@ export const AddUser = props => {
     if(+userAge < 1){
       return
     }
+    props.onAddUser(userName, userAge)
     setUserName('')
     setUserAge('')
   }
@@ -34,9 +35,21 @@ export const AddUser = props => {
     <Card className={styles.input}>
       <form onSubmit={addUserHandler}>
         <label htmlFor="username">User Name</label>
-        <input id="username" name="username" type="text" onChange={changeHandler} value={userName}/>
+        <input 
+          id="username" 
+          name="username" 
+          type="text" 
+          onChange={changeHandler} 
+          value={userName}
+        />
         <label htmlFor="age">Age (Years)</label>
-        <input id="age" type="number" name="age" onChange={changeHandler} value={userAge}/>
+        <input 
+          id="age" 
+          type="number" 
+          name="age" 
+          onChange={changeHandler} 
+          value={userAge}
+        />
         <Button type="submit">Add User</Button>
       </form>
     </Card>
